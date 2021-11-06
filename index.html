@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=440f6e98bfd6d64aa6e6b8974736171d"
+      rel="stylesheet"
+    />
     <title>Weather Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>Weather Dashboard</header>
 
     <!-- left coloumn -->
     <div>
-        <!-- search for city -->
-        <div>
-            <h3>Search for a City</h3>
-            <form id="user-form" class="card-body">
-                <label class="form-label" for="city">City Name</label>
-                <input name="city" id="city" type="text" autofocus="true" class="form-input"/>
-                <button type="submit" class="btn">Search</button>
+      <!-- search for city -->
+      <div>
+        <h3>Search for a City</h3>
+        <form id="user-form" class="card-body">
+          <label class="form-label" for="city">City Name</label>
+          <input
+            name="city"
+            id="city"
+            type="text"
+            autofocus="true"
+            class="form-input"
+          />
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
 
-            </form>
-            
-        </div>
-
-        <!-- search history -->
-        <div>
-
-        </div>
+      <!-- search history -->
+      <div></div>
     </div>
 
     <!-- right coloumn -->
     <div>
-        <!-- search results -->
-        <div>
+      <!-- search results -->
+      <div id="current-day"></div>
 
-        </div>
-
-        <!-- 5-day forecast -->
-        <div>
-            <h3>5-Day Forecast</h3>
-        </div>
+      <!-- 5-day forecast -->
+      <div>
+        <h3>5-Day Forecast</h3>
+      </div>
     </div>
-</body>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
