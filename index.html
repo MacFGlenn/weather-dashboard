@@ -5,44 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
       href="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=440f6e98bfd6d64aa6e6b8974736171d"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <header>Weather Dashboard</header>
+    <header class="container bg-primary">
+      <div class="row-6">
+        <div class="col-6">Weather Dashboard</div>
+      </div>
+    </header>
 
     <!-- left coloumn -->
-    <div>
-      <!-- search for city -->
-      <div>
-        <h3>Search for a City</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="city">City Name</label>
-          <input
-            name="city"
-            id="city"
-            type="text"
-            autofocus="true"
-            class="form-input"
-          />
-          <button type="submit" class="btn">Search</button>
-        </form>
-      </div>
+    <div class="container">
+      <div class="row">
+        <!-- search for city -->
+        <div class="col">
+          <h3>Search for a City</h3>
+          <form id="user-form" class="card-body">
+            <label class="form-label" for="city">City Name</label>
+            <input
+              name="city"
+              id="city"
+              type="text"
+              autofocus="true"
+              class="form-input"
+            />
+            <button type="submit" class="btn border-dark">Search</button>
+          </form>
 
-      <!-- search history -->
-      <div></div>
-    </div>
+          <!-- search history -->
+          <div id="search-history"></div>
+        </div>
+        <!-- right coloumn -->
+        <div class="col">
+          <!-- search results -->
+          <div class="row">
+            <div id="current-day" class="col-9 border-dark"></div>
+          </div>
 
-    <!-- right coloumn -->
-    <div>
-      <!-- search results -->
-      <div id="current-day"></div>
-
-      <!-- 5-day forecast -->
-      <div id="five-day">
-          
+          <!-- 5-day forecast -->
+          <div class="row">
+            <div id="five-day" class="col-9"></div>
+          </div>
+        </div>
       </div>
     </div>
 
